@@ -1,3 +1,9 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "👑WW2WARE";
+    Text = "Script Loaded";
+    Duration = 3;
+})
+wait(3)
 function notify(L_461_arg0, L_462_arg1, L_463_arg2)
 		game.StarterGui:SetCore("SendNotification", {
 			Title = L_461_arg0;
@@ -114,7 +120,7 @@ function notify(L_461_arg0, L_462_arg1, L_463_arg2)
 			L_453_ = true
 			L_452_ = getClosestPlayerToCursor()
 			if L_450_.Nigger then
-				notify("👑WW2WARE", "Locked Onto: ".. tostring(L_452_.Character.Humanoid.DisplayName) .. "", 1)
+				notify("👑WW2WARE", "Target: " .. tostring(L_452_.Character.Humanoid.DisplayName) .. "", 1)
 			end
 		end
 	end)
@@ -165,7 +171,8 @@ function notify(L_461_arg0, L_462_arg1, L_463_arg2)
 )
 	game.Players.LocalPlayer.Chatted:Connect(
     function(L_488_arg0)
-		if L_488_arg0 == "print" then
+		if L_488_arg0 == "!check" then
+		     notify("👑WW2WARE", "Prediction F9")
 			print(_G.PRED)
 		end
 	end
@@ -195,11 +202,7 @@ function notify(L_461_arg0, L_462_arg1, L_463_arg2)
 	game.Players.LocalPlayer.Chatted:Connect(
     function(L_491_arg0)
 		if L_491_arg0 == "W+" then
-		       game.StarterGui:SetCore("SendNotification", {
-    Title = "👑WW2WARE";
-    Text = "Prediction +0.001"
-    Duration = 15;
-})
+		    notify("👑WW2WARE", "Prediction +0.001")
 			_G.PRED = _G.PRED + 0.001
 		end
 	end
@@ -207,11 +210,7 @@ function notify(L_461_arg0, L_462_arg1, L_463_arg2)
 	game.Players.LocalPlayer.Chatted:Connect(
     function(L_492_arg0)
 		if L_492_arg0 == "W-" then
-            game.StarterGui:SetCore("SendNotification", {
-    Title = "👑WW2WARE";
-    Text = "Prediction -0.001"
-    Duration = 15;
-})
+		     notify("👑WW2WARE", "Prediction -0.001")
 			_G.PRED = _G.PRED - 0.001
 		end
 	end
