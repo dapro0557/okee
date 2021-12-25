@@ -1,6 +1,6 @@
 game.StarterGui:SetCore("SendNotification", {
     Title = "👑WW2WARE";
-    Text = "Welcome";
+    Text = "Welcome 2 WW2WARE";
     Duration = 3;
 })
 wait(3)
